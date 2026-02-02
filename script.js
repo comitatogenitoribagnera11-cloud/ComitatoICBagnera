@@ -13,55 +13,31 @@ function toggleWebForm() {
 function handleSubmit(event) {
     event.preventDefault();
     
-    // Get form data
-    const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData.entries());
-    
-    // Validate required checkboxes
     if (!document.getElementById('accetta-statuto').checked || !document.getElementById('privacy').checked) {
-        alert('Devi accettare lo statuto e il trattamento dei dati personali per procedere.');
+        alert('Devi accettare lo statuto e il trattamento dei dati.');
         return;
     }
 
-    // Create email body
-    const emailBody = `
-Nuova adesione al Comitato Genitori IC Bagnera
+    const btn = event.target.querySelector('button[type="submit"]');
+    btn.textContent = "Invio in corso...";
+    btn.disabled = true;
 
-Tipo: ${data.tipo}
-Nome: ${data.nome}
-Cognome: ${data.cognome}
-Email: ${data.email}
-Telefono: ${data.telefono}
-Plesso: ${data.plesso}
-Classe: ${data.classe}
-Sezione: ${data.sezione}
-Alunno/a: ${data.alunno}
-
-Comunicazioni email: ${data['comunicazioni-email'] ? 'Sì' : 'No'}
-
-Il genitore dichiara di:
-- Aver accettato lo Statuto
-- Aver fornito il consenso al trattamento dei dati personali
-    `.trim();
-
-    // Create mailto link
-    const mailtoLink = `mailto:comitato.genitori.icbagnera@gmail.com?subject=Nuova Adesione - ${data.nome} ${data.cognome}&body=${encodeURIComponent(emailBody)}`;
-    
-    // Open email client
-    window.location.href = mailtoLink;
-    
-    // Show success message
-    const successMsg = document.getElementById('success-message');
-    if (successMsg) {
-        successMsg.classList.add('show');
-        
-        // Reset form after 3 seconds
-        setTimeout(() => {
+    // Sostituisci i codici qui sotto con quelli del tuo account EmailJS
+    emailjs.sendForm('service_5jsq4qt', 'template_7wfnh5s', event.target)
+        .then(() => {
+            document.getElementById('success-message').classList.add('show');
             event.target.reset();
-            successMsg.classList.remove('show');
-            toggleWebForm();
-        }, 3000);
-    }
+            setTimeout(() => {
+                document.getElementById('success-message').classList.remove('show');
+                toggleWebForm();
+                btn.textContent = "Invia Adesione";
+                btn.disabled = false;
+            }, 3000);
+        }, (error) => {
+            alert("Errore nell'invio: " + JSON.stringify(error));
+            btn.textContent = "Invia Adesione";
+            btn.disabled = false;
+        });
 }
 
 // Lightbox functions
