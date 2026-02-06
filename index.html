@@ -111,47 +111,47 @@
                 <span class="ruolo-badge">Presidente</span>
                 <h3>Danilo Anania</h3>
                 <p class="plesso">Plesso Gherardi (ad interim)</p>
-                <a href="mailto:comitatogenitoribagnera11@gmail.com" class="email-link">✉️ Contatta</a>
+                <a href="mailto:comitatogenitori@icbagnera.edu.it" class="email-link">✉️ Contatta</a>
             </div>
             <div class="membro-card">
                 <span class="ruolo-badge">Vice Presidente</span>
                 <h3>Cristina Siragusa</h3>
-                <a href="mailto:cgbagnera.giuliani@gmail.com" class="email-link">✉️ Contatta</a>
+                <a href="mailto:comitatogenitori@icbagnera.edu.it" class="email-link">✉️ Contatta</a>
             </div>
             <div class="membro-card">
                 <span class="ruolo-badge">Tesoriere</span>
                 <h3>Marco Marotta</h3>
-                <a href="mailto:comitatogenitoribagnera11@gmail.com" class="email-link">✉️ Contatta</a>
+                <a href="mailto:comitatogenitori@icbagnera.edu.it" class="email-link">✉️ Contatta</a>
             </div>
             <div class="membro-card">
                 <span class="ruolo-badge">Referente</span>
                 <h3>Andrea Goatin</h3>
                 <p class="plesso">Plesso Giuliani</p>
-                <a href="mailto:cgbagnera.giuliani@gmail.com" class="email-link">✉️ Contatta</a>
+                <a href="mailto:comitatogenitori@icbagnera.edu.it" class="email-link">✉️ Contatta</a>
             </div>
             <div class="membro-card">
                 <span class="ruolo-badge">Referente</span>
                 <h3>Cristina Corrirossi</h3>
                 <p class="plesso">Plesso Guttuso</p>
-                <a href="mailto:cgbagnera.guttuso@gmail.com" class="email-link">✉️ Contatta</a>
+                <a href="mailto:comitatogenitori@icbagnera.edu.it" class="email-link">✉️ Contatta</a>
             </div>
             <div class="membro-card">
                 <span class="ruolo-badge">Referente</span>
                 <h3>Fabrizia Ferrari</h3>
                 <p class="plesso">Plesso Cuoco</p>
-                <a href="mailto:cgbagnera.cuoco@gmail.com" class="email-link">✉️ Contatta</a>
+                <a href="mailto:comitatogenitori@icbagnera.edu.it" class="email-link">✉️ Contatta</a>
             </div>
             <div class="membro-card">
                 <span class="ruolo-badge">Referente</span>
                 <h3>Alketa Lesi</h3>
                 <p class="plesso">Plesso Pascoli</p>
-                <a href="mailto:cgbagnera.pascoli@gmail.com" class="email-link">✉️ Contatta</a>
+                <a href="mailto:comitatogenitori@icbagnera.edu.it" class="email-link">✉️ Contatta</a>
             </div>
             <div class="membro-card">
                 <span class="ruolo-badge">Referente</span>
                 <h3>Daniele Giovanni Monaco</h3>
                 <p class="plesso">Plesso Bagnera</p>
-                <a href="mailto:comitatogenitoribagnera11@gmail.com" class="email-link">✉️ Contatta</a>
+                <a href="mailto:comitatogenitori@icbagnera.edu.it" class="email-link">✉️ Contatta</a>
             </div>
         </div>
     </div>
@@ -161,40 +161,31 @@
     <div class="container">
         <div class="section-title">
             <h2>Aderisci al Comitato</h2>
-            <p class="subtitle">Scegli come compilare il modulo di adesione</p>
+            <p class="subtitle">Unisciti a noi! La partecipazione è gratuita e aperta a tutti i genitori</p>
             <div class="title-line"></div>
         </div>
-        
-        <div class="modulo-options">
-            <div class="option-card">
-                <span class="icon">📄</span>
-                <h3>Opzione 1: Modulo PDF</h3>
-                <p>Scarica il modulo in formato PDF, compilalo e invialo via email all'indirizzo ufficiale del comitato.</p>
-                <a href="modulo_adesione_new.pdf" download class="btn btn-primary">Scarica PDF</a>
+
+        <div class="adesione-container">
+            <div class="adesione-info">
+                <h3>Perché aderire?</h3>
+                <ul>
+                    <li>Contribuisci attivamente al benessere della scuola</li>
+                    <li>Partecipa all'organizzazione di eventi</li>
+                    <li>Collabora con altri genitori e con la scuola</li>
+                    <li>Resta informato su tutte le iniziative</li>
+                </ul>
+                <p class="nota">💡 <strong>È completamente gratuito!</strong> Non ci sono quote o obblighi vincolanti.</p>
             </div>
-            
-            <div class="option-card">
-                <span class="icon">💻</span>
-                <h3>Opzione 2: Modulo Web</h3>
-                <p>Compila il modulo direttamente online in modo rapido e conveniente. I dati verranno inviati automaticamente.</p>
-                <button class="btn btn-secondary" onclick="toggleWebForm()">Compila Online</button>
+
+            <div class="moduli-buttons">
+                <button onclick="toggleWebForm()" class="btn btn-primary">Compila Online</button>
+                <a href="modulo_adesione.pdf" download class="btn btn-secondary">Scarica PDF</a>
             </div>
         </div>
 
-        <!-- MODULO WEB -->
-        <div id="web-form-container">
-            <h3 style="color: var(--blu-scuro); margin-bottom: 24px; text-align: center;">Modulo di Adesione Online</h3>
-            <form id="adesione-form" onsubmit="handleSubmit(event)">
-                <div class="form-group">
-                    <label for="tipo">Tipo di adesione *</label>
-                    <select id="tipo" name="tipo" required>
-                        <option value="">Seleziona...</option>
-                        <option value="rappresentante">Rappresentante di classe</option>
-                        <option value="genitore">Genitore</option>
-                        <option value="altro">Chi fa legalmente le veci del Genitore</option>
-                    </select>
-                </div>
-
+        <div id="web-form" class="web-form" style="display: none;">
+            <h3>Modulo di Adesione Online</h3>
+            <form id="adesione-form">
                 <div class="form-group">
                     <label for="nome">Nome *</label>
                     <input type="text" id="nome" name="nome" required>
@@ -211,14 +202,14 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="telefono">Telefono *</label>
-                    <input type="tel" id="telefono" name="telefono" required>
+                    <label for="telefono">Telefono</label>
+                    <input type="tel" id="telefono" name="telefono">
                 </div>
 
                 <div class="form-group">
                     <label for="plesso">Plesso *</label>
                     <select id="plesso" name="plesso" required>
-                        <option value="">Seleziona plesso...</option>
+                        <option value="">Seleziona il plesso...</option>
                         <option value="Bagnera">Bagnera</option>
                         <option value="Cuoco">Cuoco</option>
                         <option value="Gherardi">Gherardi</option>
@@ -291,14 +282,159 @@
         </div>
 
         <h3 style="color: var(--blu-scuro); margin-bottom: 32px; font-size: 1.75rem;">Prossimi Eventi</h3>
-        <div class="eventi-grid">
-            <div class="evento-card">
-                <span class="evento-icon">🎭</span>
-                <h3>Festa di Carnevale</h3>
-                <div class="data">📅 Venerdì 21 Febbraio 2026</div>
-                <p>Giochi, animazione, laboratori creativi e tanto divertimento per tutti i bambini! Stiamo cercando volontari per l'organizzazione.</p>
-                <a href="#contatti">Partecipa Come Volontario →</a>
+        
+        <!-- ===== FESTA DI CARNEVALE - DETTAGLIO ===== -->
+        <div class="evento-highlight" style="
+            background: linear-gradient(135deg, #fff9f0 0%, #fff3e5 100%);
+            border-radius: 25px;
+            padding: 40px;
+            margin-bottom: 50px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            border: 3px solid var(--arancione);
+            position: relative;
+            overflow: hidden;">
+            
+            <!-- Decorazioni -->
+            <div style="position: absolute; top: -30px; right: -30px; font-size: 12rem; opacity: 0.05; pointer-events: none;">🎭</div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+                
+                <!-- Colonna Sinistra: Locandina -->
+                <div style="text-align: center;">
+                    <img src="festa_carnevale.jpeg" alt="Locandina Festa di Carnevale" style="
+                        width: 100%;
+                        max-width: 500px;
+                        border-radius: 15px;
+                        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+                        margin-bottom: 20px;">
+                </div>
+                
+                <!-- Colonna Destra: Dettagli -->
+                <div>
+                    <h2 style="
+                        color: var(--blu-scuro);
+                        font-size: 2.5rem;
+                        margin-bottom: 15px;
+                        font-weight: 800;">
+                        🎭 La Festa di Carnevale
+                    </h2>
+                    
+                    <div style="
+                        background: white;
+                        padding: 25px;
+                        border-radius: 15px;
+                        margin-bottom: 25px;
+                        box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                        
+                        <div style="margin-bottom: 15px;">
+                            <strong style="color: var(--blu-scuro); font-size: 1.1rem;">📅 Data:</strong>
+                            <span style="font-size: 1.2rem; color: var(--arancione); font-weight: bold;"> Venerdì 21 febbraio</span>
+                        </div>
+                        
+                        <div style="margin-bottom: 15px;">
+                            <strong style="color: var(--blu-scuro); font-size: 1.1rem;">🕙 Orario:</strong>
+                            <span style="font-size: 1.1rem;"> Dalle 10:00 alle 12:00</span>
+                        </div>
+                        
+                        <div>
+                            <strong style="color: var(--blu-scuro); font-size: 1.1rem;">📍 Luogo:</strong>
+                            <span style="font-size: 1.1rem;"> Centro Anziani – Via dei Papareschi n.28/B</span>
+                        </div>
+                    </div>
+                    
+                    <div style="
+                        background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+                        padding: 25px;
+                        border-radius: 15px;
+                        margin-bottom: 25px;
+                        border-left: 5px solid var(--blu-medio);">
+                        
+                        <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 15px;">
+                            <strong>Immagina un sabato mattina rilassato:</strong><br>
+                            i bambini che giocano felici, mentre i genitori chiacchierano davanti a un super brunch.
+                        </p>
+                        
+                        <p style="font-size: 1.1rem; line-height: 1.7;">
+                            Un posto al chiuso dove poter indossare le migliori maschere,
+                            condividere idee e costruire insieme nuovi progetti.
+                        </p>
+                    </div>
+                    
+                    <div style="
+                        background: #fff8e1;
+                        padding: 20px;
+                        border-radius: 12px;
+                        margin-bottom: 25px;
+                        border-left: 4px solid #ffc107;">
+                        
+                        <p style="font-size: 1.05rem; margin: 0;">
+                            🎟️ <strong>Il contributo è di soli 5 euro</strong>, (ogni cosa in più sarà naturalmente ben accetta)
+                            che andranno interamente a beneficio della scuola — tutto sarà trasparente e rendicontato.
+                        </p>
+                    </div>
+                    
+                    <div style="
+                        background: white;
+                        padding: 25px;
+                        border-radius: 15px;
+                        box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                        
+                        <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 15px;">
+                            <strong style="color: var(--blu-scuro);">Noi possiamo fare la differenza.</strong><br>
+                            Abbiamo il dovere e il privilegio di creare per i nostri figli anni di scuola sereni,
+                            fondati su rispetto, sicurezza e collaborazione.
+                        </p>
+                        
+                        <p style="font-size: 1.15rem; font-weight: bold; color: var(--arancione); margin: 0;">
+                            Perché una comunità unita si aiuta, sempre.
+                        </p>
+                    </div>
+                    
+                    <div style="
+                        margin-top: 30px;
+                        text-align: center;
+                        padding: 25px;
+                        background: linear-gradient(135deg, var(--blu-medio), var(--blu-scuro));
+                        border-radius: 15px;
+                        color: white;">
+                        
+                        <p style="font-size: 1.3rem; margin-bottom: 10px;">
+                            <strong>Ti aspettiamo, con il sorriso e la voglia di conoscerci davvero! 💫</strong>
+                        </p>
+                    </div>
+                    
+                    <div style="
+                        margin-top: 25px;
+                        background: #f0f4ff;
+                        padding: 20px;
+                        border-radius: 12px;
+                        border-left: 4px solid var(--blu-medio);">
+                        
+                        <p style="font-size: 1rem; margin-bottom: 10px;">
+                            <strong>P.S.</strong> Hai qualche talento da condividere?
+                        </p>
+                        <p style="font-size: 0.95rem; margin: 0; line-height: 1.6;">
+                            Maghi, truccabimbi, genitori che hanno piacere a fare letture… chiunque voglia dare una mano durante l'evento è il benvenuto!
+                            Ogni piccolo gesto può fare una grande differenza. 
+                            <a href="#contatti" style="color: var(--blu-medio); font-weight: bold; text-decoration: underline;">Contattaci per partecipare!</a>
+                        </p>
+                    </div>
+                </div>
             </div>
+        </div>
+        
+        <!-- Responsive per mobile -->
+        <style>
+        @media (max-width: 768px) {
+            .evento-highlight > div {
+                grid-template-columns: 1fr !important;
+            }
+        }
+        </style>
+        
+        <!-- Altri Eventi -->
+        <h3 style="color: var(--blu-scuro); margin: 50px 0 32px 0; font-size: 1.75rem;">Altri Eventi in Programma</h3>
+        <div class="eventi-grid">
             <div class="evento-card">
                 <span class="evento-icon">🌱</span>
                 <h3>Non ti scordar di me</h3>
@@ -330,8 +466,8 @@
             <div class="contatti-box" style="padding: 30px; background: white; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-top: 5px solid var(--blu-scuro);">
                 <h3 style="margin-bottom: 20px; color: var(--blu-scuro);">📧 Scrivici</h3>
                 <p>Per informazioni generali, proposte o supporto:</p>
-                <a href="mailto:comitatogenitoribagnera11@gmail.com" style="color: var(--blu-medio); font-weight: bold; text-decoration: none; display: block; margin-top: 10px;">
-                    comitatogenitoribagnera11@gmail.com
+                <a href="mailto:comitatogenitori@icbagnera.edu.it" style="color: var(--blu-medio); font-weight: bold; text-decoration: none; display: block; margin-top: 10px;">
+                    comitatogenitori@icbagnera.edu.it
                 </a>
             </div>
 
@@ -378,23 +514,15 @@
             <a href="#direttivo">Direttivo</a>
             <a href="#modulo">Aderisci</a>
             <a href="#eventi">Eventi</a>
-            <a href="eventi-passati.html">Eventi Passati</a>
             <a href="#contatti">Contatti</a>
-            <a href="statuto_comitato_approvato.pdf" target="_blank">Statuto</a>
         </div>
 
-        <div class="footer-divider"></div>
-
-        <div class="footer-copyright">
-            <p>&copy; 2026 Comitato Genitori IC Bagnera. Tutti i diritti riservati.</p>
-            <p style="margin-top: 8px; font-size: 0.85rem;">
-                Uniti per il benessere e la crescita dei nostri figli 🤝
-            </p>
+        <div class="footer-social">
+            <p>© 2025 Comitato Genitori IC Bagnera. Tutti i diritti riservati.</p>
         </div>
     </div>
 </footer>
 
 <script src="script.js"></script>
-
-</body>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
 </html>
