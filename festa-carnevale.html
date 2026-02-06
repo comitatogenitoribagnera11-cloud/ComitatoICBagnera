@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festa di Carnevale 2025 - Comitato Genitori IC Bagnera</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .carnevale-hero {
+            background: linear-gradient(135deg, #ff6b9d 0%, #ffa07a 50%, #ffd700 100%);
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carnevale-hero::before {
+            content: '🎭 🎨 🎪 🎉 🎊 ✨';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 8rem;
+            opacity: 0.1;
+            white-space: nowrap;
+        }
+
+        .carnevale-hero h1 {
+            color: white;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 2;
+        }
+
+        .carnevale-hero .data-evento {
+            color: white;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            font-weight: 600;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .locandina-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .locandina-container img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--raggio-grande);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .locandina-container img:hover {
+            transform: scale(1.02);
+        }
+
+        .info-evento {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .info-box {
+            background: white;
+            padding: 40px;
+            border-radius: var(--raggio-grande);
+            box-shadow: var(--ombra);
+            margin-bottom: 30px;
+        }
+
+        .info-box h2 {
+            color: var(--blu-scuro);
+            font-size: 2rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .info-box h2 .emoji {
+            font-size: 2.5rem;
+        }
+
+        .dettagli-pratici {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .dettaglio-item {
+            background: var(--blu-pallido);
+            padding: 25px;
+            border-radius: var(--raggio);
+            text-align: center;
+        }
+
+        .dettaglio-item .icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .dettaglio-item h3 {
+            color: var(--blu-scuro);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .dettaglio-item p {
+            color: var(--grigio);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .descrizione-testo {
+            color: var(--testo);
+            font-size: 1.15rem;
+            line-height: 1.9;
+            margin: 25px 0;
+        }
+
+        .descrizione-testo p {
+            margin-bottom: 20px;
+        }
+
+        .contributo-box {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            padding: 30px;
+            border-radius: var(--raggio);
+            border-left: 5px solid var(--oro);
+            margin: 30px 0;
+        }
+
+        .contributo-box h3 {
+            color: var(--blu-scuro);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .volontari-box {
+            background: linear-gradient(135deg, #e8f8ee 0%, #c8e6c9 100%);
+            padding: 30px;
+            border-radius: var(--raggio);
+            border-left: 5px solid var(--verde);
+            margin: 30px 0;
+        }
+
+        .volontari-box h3 {
+            color: var(--blu-scuro);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .cta-partecipa {
+            background: linear-gradient(135deg, var(--blu-scuro), var(--blu-medio));
+            color: white;
+            padding: 50px 40px;
+            border-radius: var(--raggio-grande);
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .cta-partecipa h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-partecipa p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 30px 0;
+            color: var(--blu-medio);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--oro);
+            transform: translateX(-5px);
+        }
+
+        @media (max-width: 768px) {
+            .dettagli-pratici {
+                grid-template-columns: 1fr;
+            }
+
+            .info-box {
+                padding: 25px 20px;
+            }
+
+            .cta-partecipa {
+                padding: 35px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+    <img src="logo_comitato.jpg" alt="Logo Comitato Genitori IC Bagnera" class="logo">
+    <h1>Comitato Genitori IC Bagnera</h1>
+    <p>Uniti per il benessere e la crescita dei nostri figli</p>
+</header>
+
+<!-- ===== NAVIGATION ===== -->
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#chi-siamo">Chi Siamo</a></li>
+        <li><a href="index.html#direttivo">Direttivo</a></li>
+        <li><a href="index.html#modulo">Aderisci</a></li>
+        <li><a href="index.html#eventi">Eventi</a></li>
+        <li><a href="index.html#contatti">Contatti</a></li>
+    </ul>
+</nav>
+
+<!-- ===== HERO CARNEVALE ===== -->
+<div class="carnevale-hero">
+    <h1>🎭 La Festa di Carnevale 🎭</h1>
+    <div class="data-evento">Venerdì 21 Febbraio 2025 • 10:00-12:00</div>
+</div>
+
+<!-- ===== LOCANDINA ===== -->
+<div class="locandina-container">
+    <img src="locandina_carnevale.jpg" alt="Locandina Festa di Carnevale" onclick="openLightbox('locandina_carnevale.jpg')">
+</div>
+
+<!-- ===== INFORMAZIONI EVENTO ===== -->
+<section style="padding: 60px 20px; background: var(--grigio-chiaro);">
+    <div class="info-evento">
+        <a href="index.html#eventi" class="back-link">← Torna agli Eventi</a>
+
+        <div class="info-box">
+            <h2><span class="emoji">📍</span> Dettagli dell'Evento</h2>
+            
+            <div class="dettagli-pratici">
+                <div class="dettaglio-item">
+                    <span class="icon">📅</span>
+                    <h3>Quando</h3>
+                    <p><strong>Venerdì 21 Febbraio</strong><br>dalle 10:00 alle 12:00</p>
+                </div>
+
+                <div class="dettaglio-item">
+                    <span class="icon">📍</span>
+                    <h3>Dove</h3>
+                    <p><strong>Centro Anziani</strong><br>Via dei Papareschi</p>
+                </div>
+
+                <div class="dettaglio-item">
+                    <span class="icon">🎟️</span>
+                    <h3>Contributo</h3>
+                    <p><strong>5 euro</strong><br>(a beneficio della scuola)</p>
+                </div>
+            </div>
+
+            <div class="descrizione-testo">
+                <p>Immagina una mattinata rilassata: i bambini che giocano felici, mentre i genitori chiacchierano davanti a un super brunch. Un posto al chiuso dove poter indossare le migliori maschere, condividere idee e costruire insieme nuovi progetti.</p>
+
+                <div class="contributo-box">
+                    <h3>🎟️ Il Contributo</h3>
+                    <p>Il contributo è di soli 5 euro (ogni cosa in più sarà naturalmente ben accetta) che andranno interamente a beneficio della scuola — tutto sarà trasparente e rendicontato.</p>
+                </div>
+
+                <p><strong>Noi possiamo fare la differenza.</strong> Abbiamo il dovere e il privilegio di creare per i nostri figli anni di scuola sereni, fondati su rispetto, sicurezza e collaborazione. Perché una comunità unita si aiuta, sempre.</p>
+
+                <p>Ti aspettiamo, con il sorriso e la voglia di conoscerci davvero! 💫</p>
+
+                <div class="volontari-box">
+                    <h3>🙋‍♀️ Hai qualche talento da condividere?</h3>
+                    <p>Maghi, truccabimbi, genitori che hanno piacere a fare letture… chiunque voglia dare una mano durante l'evento è il benvenuto! Ogni piccolo gesto può fare una grande differenza.</p>
+                    <p style="margin-top: 15px;"><a href="index.html#contatti" style="color: var(--blu-medio); font-weight: bold; text-decoration: none;">Contattaci per partecipare come volontario →</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-partecipa">
+            <h2>🎉 Ci Vediamo alla Festa!</h2>
+            <p>Un'occasione speciale per stare insieme, divertirsi e rafforzare la nostra comunità scolastica.</p>
+            <a href="index.html#contatti" class="btn btn-secondary" style="background: white; color: var(--blu-scuro);">📧 Contattaci per Info</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== LIGHTBOX ===== -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Immagine ingrandita">
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="footer-content">
+        <img src="logo_comitato.jpg" alt="Logo Comitato Genitori IC Bagnera" class="footer-logo">
+        
+        <div class="footer-info">
+            <h3>Comitato Genitori IC Bagnera</h3>
+            <p>Un'associazione di genitori volontari al servizio della comunità scolastica</p>
+            <p>Istituto Comprensivo Statale Giuseppe Bagnera - Roma</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#chi-siamo">Chi Siamo</a>
+            <a href="index.html#direttivo">Direttivo</a>
+            <a href="index.html#modulo">Aderisci</a>
+            <a href="index.html#eventi">Eventi</a>
+            <a href="index.html#contatti">Contatti</a>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-copyright">
+            <p>&copy; 2025 Comitato Genitori IC Bagnera. Tutti i diritti riservati.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
