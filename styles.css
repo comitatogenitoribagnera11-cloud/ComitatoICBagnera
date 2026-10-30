@@ -925,3 +925,250 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   section { padding: 54px 14px; }
   .membro-card, .evento-card, .option-card { padding: 25px 20px; }
 }
+
+
+/* =========================================================
+   RESTYLING VISIVO COMPLETO – COMITATO GENITORI IC BAGNERA
+   Override grafici: non modifica markup, moduli o script.
+   ========================================================= */
+:root {
+  --blu-scuro: #102a43 !important;
+  --blu-medio: #1f5678 !important;
+  --blu-chiaro: #4386a8 !important;
+  --blu-pallido: #eaf3f7 !important;
+  --oro: #d99a3d !important;
+  --oro-chiaro: #f4dba8 !important;
+  --grigio-chiaro: #f3f7fa !important;
+  --grigio: #62788a !important;
+  --testo: #263b4d !important;
+  --ombra: 0 12px 34px rgba(16,42,67,.09) !important;
+  --ombra-hover: 0 20px 48px rgba(16,42,67,.15) !important;
+  --raggio: 18px !important;
+  --raggio-grande: 30px !important;
+}
+html { scroll-padding-top: 76px; }
+body {
+  background: #f7f9fb !important;
+  color: #263b4d !important;
+  font-family: "Segoe UI", Inter, system-ui, sans-serif !important;
+  line-height: 1.72 !important;
+}
+header {
+  min-height: 390px;
+  padding: 54px 20px 68px !important;
+  background:
+    radial-gradient(ellipse at 12% 15%, rgba(93,166,192,.28), transparent 38%),
+    radial-gradient(ellipse at 90% 90%, rgba(217,154,61,.20), transparent 35%),
+    linear-gradient(125deg, #102a43 0%, #174766 55%, #23617b 100%) !important;
+}
+header::before {
+  opacity: .16 !important;
+  background-size: 34px 34px !important;
+}
+.logo {
+  max-width: 230px !important;
+  width: min(58vw,230px) !important;
+  padding: 15px !important;
+  margin-bottom: 27px !important;
+  border-radius: 24px !important;
+  box-shadow: 0 18px 45px rgba(0,0,0,.22) !important;
+}
+header h1 {
+  font-size: clamp(2.2rem,5vw,3.5rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: -.045em !important;
+  margin-bottom: 10px !important;
+  text-shadow: 0 3px 16px rgba(0,0,0,.12);
+}
+header p {
+  font-size: clamp(1.05rem,2.2vw,1.3rem) !important;
+  color: #e3eef4 !important;
+  letter-spacing: .015em;
+}
+nav {
+  background: rgba(255,255,255,.96) !important;
+  box-shadow: 0 6px 24px rgba(16,42,67,.08) !important;
+  border-bottom: 1px solid #e4edf2 !important;
+}
+nav ul { gap: 5px; padding: 0 12px !important; }
+nav a {
+  padding: 17px 22px !important;
+  font-size: .96rem;
+  font-weight: 700 !important;
+  border-radius: 12px 12px 0 0;
+}
+nav a:hover, nav a:focus {
+  background: #edf5f8 !important;
+  color: #174766 !important;
+}
+.container { max-width: 1240px !important; }
+.container[style*="margin-top: 40px"] { margin-top: 30px !important; margin-bottom: 52px !important; }
+.container[style*="margin-top: 40px"] > div {
+  background:
+    radial-gradient(circle at 95% 8%, rgba(255,255,255,.13), transparent 24%),
+    linear-gradient(125deg,#173e5b 0%,#205e7b 58%,#28728a 100%) !important;
+  border: 0 !important;
+  border-radius: 28px !important;
+  padding: clamp(25px,4vw,48px) !important;
+  box-shadow: 0 20px 48px rgba(16,42,67,.18) !important;
+}
+.container[style*="margin-top: 40px"] h2 {
+  font-size: clamp(1.8rem,4vw,2.7rem) !important;
+  line-height: 1.15 !important;
+  letter-spacing: -.035em !important;
+}
+.container[style*="margin-top: 40px"] ul {
+  columns: 2;
+  column-gap: 32px;
+  padding: 18px 24px !important;
+}
+.container[style*="margin-top: 40px"] li { break-inside: avoid; padding: 3px 0; }
+.container[style*="margin-top: 40px"] a {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.container[style*="margin-top: 40px"] a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.16);
+}
+.tutti-comitato-container {
+  max-width: 1160px;
+  margin: 48px auto 66px !important;
+  padding: clamp(28px,5vw,64px) !important;
+  border: 1px solid #e1ebf0 !important;
+  border-radius: 30px !important;
+  background:
+    radial-gradient(circle at 100% 0%,rgba(217,154,61,.10),transparent 28%),
+    linear-gradient(145deg,#fff 0%,#f0f6f9 100%) !important;
+  box-shadow: 0 18px 44px rgba(16,42,67,.07) !important;
+}
+.tutti-comitato-container h2 {
+  font-size: clamp(2rem,4vw,2.8rem) !important;
+  letter-spacing: -.04em !important;
+}
+.tutti-comitato-container h3 {
+  color: #b57a25 !important;
+  font-size: 1rem !important;
+  letter-spacing: .12em !important;
+}
+section {
+  padding: 76px 20px !important;
+}
+section:nth-child(even) { background: #f1f5f8 !important; }
+.section-title { margin-bottom: 44px !important; }
+.section-title h2 {
+  font-size: clamp(2rem,4vw,2.7rem) !important;
+  letter-spacing: -.04em !important;
+}
+.subtitle { font-size: 1.08rem !important; }
+.title-line {
+  width: 64px !important;
+  height: 5px !important;
+  border-radius: 8px !important;
+  background: linear-gradient(90deg,#d99a3d,#f0d39b) !important;
+}
+.direttivo-grid {
+  grid-template-columns: repeat(auto-fit,minmax(245px,1fr)) !important;
+  gap: 22px !important;
+}
+.membro-card {
+  padding: 32px 24px !important;
+  border: 1px solid #e3ebf0 !important;
+  border-radius: 22px !important;
+  background: linear-gradient(160deg,#fff 0%,#fbfdfe 100%) !important;
+  box-shadow: 0 8px 24px rgba(16,42,67,.065) !important;
+}
+.membro-card:hover {
+  transform: translateY(-7px) !important;
+  border-color: #c9dce6 !important;
+  box-shadow: 0 18px 38px rgba(16,42,67,.12) !important;
+}
+.membro-card .ruolo-badge {
+  padding: 7px 15px !important;
+  margin-bottom: 18px !important;
+  background: #eaf2f6 !important;
+  color: #1f5678 !important;
+  border: 1px solid #d8e6ed;
+  border-radius: 30px !important;
+  text-transform: uppercase;
+  letter-spacing: .055em;
+  font-size: .75rem !important;
+}
+.membro-card h3 { font-size: 1.22rem !important; }
+.membro-card .email-link {
+  padding: 9px 17px !important;
+  border-radius: 30px !important;
+  background: #edf4f7 !important;
+  border: 1px solid #dce8ee;
+  font-weight: 700 !important;
+}
+.modulo-options, .eventi-grid, .contatti-grid {
+  gap: 24px !important;
+}
+.option-card, .evento-card, .contatto-card {
+  border: 1px solid #e3ebf0 !important;
+  border-radius: 22px !important;
+  box-shadow: 0 8px 26px rgba(16,42,67,.065) !important;
+}
+.option-card:hover, .evento-card:hover, .contatto-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 18px 38px rgba(16,42,67,.12) !important;
+}
+.option-card .icon, .evento-icon, .contatto-icon { filter: saturate(.86); }
+.btn {
+  padding: 14px 27px !important;
+  border-radius: 30px !important;
+  font-weight: 750 !important;
+  letter-spacing: .01em;
+}
+.btn-primary {
+  background: linear-gradient(135deg,#1f5678,#347b9b) !important;
+}
+.btn-secondary {
+  background: linear-gradient(135deg,#e4ad58,#f1d49a) !important;
+  color: #17344b !important;
+}
+#web-form-container {
+  border: 1px solid #dce7ed !important;
+  border-radius: 26px !important;
+  padding: clamp(22px,4vw,42px) !important;
+  box-shadow: 0 18px 44px rgba(16,42,67,.11) !important;
+}
+.form-group input, .form-group select {
+  border: 1.5px solid #d8e4eb !important;
+  border-radius: 13px !important;
+  min-height: 48px;
+}
+.checkbox-item {
+  border: 1px solid #dfeaf0;
+  border-radius: 14px !important;
+}
+footer {
+  background:
+    radial-gradient(circle at 90% 0%,rgba(67,134,168,.2),transparent 30%),
+    linear-gradient(125deg,#102a43,#174766) !important;
+  padding-top: 66px !important;
+}
+.footer-logo { max-width: 190px !important; border-radius: 18px !important; }
+a, button { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 3px solid #d99a3d !important;
+  outline-offset: 3px !important;
+}
+@media (max-width: 768px) {
+  header { min-height: 0; padding: 34px 16px 44px !important; }
+  .logo { max-width: 170px !important; }
+  nav ul {
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scrollbar-width: thin;
+  }
+  nav a { white-space: nowrap; padding: 14px 16px !important; }
+  .container[style*="margin-top: 40px"] ul { columns: 1; }
+  .container[style*="margin-top: 40px"] > div { padding: 25px 21px !important; }
+  .tutti-comitato-container { margin: 28px 14px 42px !important; }
+  section { padding: 54px 14px !important; }
+  .direttivo-grid { grid-template-columns: repeat(auto-fit,minmax(220px,1fr)) !important; }
+  .membro-card, .evento-card, .option-card { padding: 25px 20px !important; }
+}
