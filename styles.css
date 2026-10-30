@@ -878,3 +878,50 @@ footer::before {
         font-size: 1.5rem; /* Evita che il testo diventi troppo grande */
     }
 }
+
+
+/* ===== RESTYLING ANTEPRIMA 2026 ===== */
+:root {
+  --blu-scuro: #14243b;
+  --blu-medio: #24527a;
+  --blu-chiaro: #4c83ad;
+  --blu-pallido: #edf4f8;
+  --oro: #d89b42;
+  --oro-chiaro: #f3dba8;
+  --grigio-chiaro: #f5f7fa;
+  --grigio: #66768a;
+  --testo: #273647;
+  --ombra: 0 8px 28px rgba(20,36,59,.08);
+  --ombra-hover: 0 16px 42px rgba(20,36,59,.14);
+  --raggio: 18px;
+  --raggio-grande: 28px;
+}
+body { background: #fbfcfe; line-height: 1.7; }
+header { padding: 44px 20px 58px; }
+.logo { max-width: 300px; margin-bottom: 22px; }
+header h1 { letter-spacing: -.035em; }
+nav { border-bottom: 1px solid #e8edf2; backdrop-filter: blur(12px); }
+nav a { padding: 17px 24px; font-weight: 650; }
+.container { max-width: 1240px; }
+section { padding: 76px 20px; }
+.section-title { margin-bottom: 42px; }
+.section-title h2 { letter-spacing: -.035em; }
+.direttivo-grid { grid-template-columns: repeat(auto-fit,minmax(245px,1fr)); gap: 22px; }
+.membro-card { padding: 30px 24px; border: 1px solid #e8edf2; box-shadow: 0 5px 20px rgba(20,36,59,.055); }
+.membro-card:hover { border-color: #d8e4ed; }
+.membro-card .ruolo-badge { background: #eaf1f6; color: #24527a; border: 1px solid #dce8f0; }
+.membro-card h3 { font-size: 1.2rem; letter-spacing: -.02em; }
+.membro-card .email-link { background: #f0f5f8; border: 1px solid #e0eaf0; }
+.email-note { color: #8a6a3c; font-size: .88rem; margin-top: 12px; }
+#web-form-container { border: 1px solid #e6edf2; }
+.form-group input, .form-group select { background: #fff; }
+.evento-card, .option-card, .contatti-box, .bacheca-box { border: 1px solid #e8edf2; }
+.btn { box-shadow: 0 4px 12px rgba(20,36,59,.08); }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid #d89b42; outline-offset: 3px; }
+@media (max-width: 768px) {
+  header { padding: 28px 14px 38px; }
+  nav ul { flex-direction: row; justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; }
+  nav a { white-space: nowrap; padding: 13px 16px; }
+  section { padding: 54px 14px; }
+  .membro-card, .evento-card, .option-card { padding: 25px 20px; }
+}
